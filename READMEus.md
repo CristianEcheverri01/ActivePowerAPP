@@ -1,9 +1,8 @@
 # Welcome official repository of Active Power
 
 ### language selector
-Spanish : [español](https://github.com/ByGameRusher/ActivePowerAPP/blob/master/README.md "español")
-
-English : [English](https://github.com/ByGameRusher/ActivePowerAPP/blob/master/READMEus.md "English")
+- [Español](https://github.com/ByGameRusher/ActivePowerAPP/blob/master/README.md "español")
+- [English](https://github.com/ByGameRusher/ActivePowerAPP/blob/master/READMEus.md "English")
 
 ***Introduction:***
 Active Power is an application of physical exercise routines.
