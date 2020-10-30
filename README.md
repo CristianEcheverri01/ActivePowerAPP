@@ -1,6 +1,7 @@
 # Bienvenido al repositorio oficial de Active Power
 ### Selección de idioma
-Español : [español](https://github.com/ByGameRusher/ActivePowerAPP/blob/master/README.md "español") \n
+Español : [español](https://github.com/ByGameRusher/ActivePowerAPP/blob/master/README.md "español") 
+
 Ingles: [English](https://github.com/ByGameRusher/ActivePowerAPP/blob/master/READMEus.md "English")
 
 **Introducción:**
