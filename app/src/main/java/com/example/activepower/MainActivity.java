@@ -8,9 +8,10 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.activepower.fragments.ChatFragment;
 import com.example.activepower.fragments.HomeFragment;
+import com.example.activepower.fragments.PremiumFragment;
 import com.example.activepower.fragments.ProfileFragment;
-import com.example.activepower.fragments.SettingFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,9 +37,13 @@ public class MainActivity extends AppCompatActivity {
                 if(item.getItemId() == R.id.menu_home){
                     showSelectFragment(new HomeFragment());
                 }
-                if(item.getItemId() == R.id.menu_settings){
-                    showSelectFragment(new SettingFragment());
+                if(item.getItemId() == R.id.menu_premium){
+                    showSelectFragment(new PremiumFragment());
                 }
+                if(item.getItemId() == R.id.menu_Mensage){
+                    showSelectFragment(new ChatFragment());
+                }
+
 
                 return true;
             }
