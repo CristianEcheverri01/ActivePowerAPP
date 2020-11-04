@@ -11,15 +11,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.activepower.R;
-import com.example.activepower.fragments.recycler.AdapterDatos;
+import com.example.activepower.adtadores.AdapterEntrenador;
+import com.example.activepower.entidades.Entrenador;
 
 import java.util.ArrayList;
 
 
 public class ChatFragment extends Fragment {
 
-    ArrayList<String> listDatos;
-    RecyclerView recyclerView;
+    AdapterEntrenador adapterEntrenador;
+    ArrayList<Entrenador> listaEntrenadores;
+    RecyclerView recyclerViewEntrenador;
     View view;
 
     private static final String ARG_PARAM1 = "param1";
@@ -53,18 +55,27 @@ public class ChatFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_chat, container, false);
+        recyclerViewEntrenador = view.findViewById(R.id.recyclerChat);
+        listaEntrenadores = new ArrayList<>();
+        //cargar la lista
+        cargarLista();
+        //mostrar datos
+        mostrarDatos();
 
-        recyclerView = view.findViewById(R.id.itemListText);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
 
-        listDatos = new ArrayList<String>();
-
-        for(int i=0;i<=50;i++){
-            listDatos.add("Dato #"+i+" ");
-        }
-
-        AdapterDatos adapter = new AdapterDatos(listDatos);
-        recyclerView.setAdapter(adapter);
         return view;
+    }
+    public void cargarLista(){
+        listaEntrenadores.add(new Entrenador("Cristian",R.drawable.persona1));
+        listaEntrenadores.add(new Entrenador("Ceballos",R.drawable.persona2));
+        listaEntrenadores.add(new Entrenador("Laura",R.drawable.persona3));
+        listaEntrenadores.add(new Entrenador("Eve",R.drawable.persona4));
+        listaEntrenadores.add(new Entrenador("Bladimir",R.drawable.persona5));
+    }
+
+    public void mostrarDatos(){
+        recyclerViewEntrenador.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false));
+        adapterEntrenador = new AdapterEntrenador(getContext(),listaEntrenadores);
+        recyclerViewEntrenador.setAdapter(adapterEntrenador);
     }
 }
