@@ -16,7 +16,6 @@ import com.example.activepower.entidades.Entrenador;
 
 import java.util.ArrayList;
 
-
 public class ChatFragment extends Fragment {
 
     AdapterEntrenador adapterEntrenador;
@@ -24,31 +23,13 @@ public class ChatFragment extends Fragment {
     RecyclerView recyclerViewEntrenador;
     View view;
 
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-
-    private String mParam1;
-    private String mParam2;
-
     public ChatFragment() {
 
-    }
-
-    public static ChatFragment newInstance(String param1, String param2) {
-        ChatFragment fragment = new ChatFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
     }
 
     @Override
@@ -62,9 +43,9 @@ public class ChatFragment extends Fragment {
         //mostrar datos
         mostrarDatos();
 
-
         return view;
     }
+
     public void cargarLista(){
         listaEntrenadores.add(new Entrenador("Cristian",R.drawable.persona1));
         listaEntrenadores.add(new Entrenador("Ceballos",R.drawable.persona2));
